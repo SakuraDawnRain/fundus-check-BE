@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+
+<body>
+
+
+    <section>
+
+        <div>
+            <form method="post" action="http://10.21.41.245:5000/predict" enctype="multipart/form-data">
+                <table>
+                    <tr>
+                        <th>
+                            <p style="color: black"><label for="upload_picture"><strong>上传图片:
+                                    </strong></label></p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="upload_picture" type="file" size="300" name="photo" style="margin-top:15px;"
+                                accept="image/png,image/gif,image/jpeg,image/jpg" />
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="提交信息" class="button-new" style="margin-top:30px;margin-left: 2px" />
+            </form>
+        </div>
+        <div>
+
+
+            <div>
+                <table id="result_list">
+                    <br />
+                    <th>
+                        <p style="color: black"><label for="upload_picture"><strong>{{ n }}
+                                </strong></label></p>
+                    </th>
+                    <tr>
+                        <td>
+                            <img style="width:360px" src="data:;base64,{{ u }}">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+    </section>
+</body>
+
+</html>
