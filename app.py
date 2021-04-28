@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 @cross_origin()
 def hello():
-    return render_template('up.html')
+    return render_template('Search.html')
 
 @app.route('/predict', methods=['POST'])
 @cross_origin()
@@ -31,4 +31,4 @@ def predict():
     heatmap_base64=heatmap_base64.decode('utf-8')
     # 打包进json 发回前端
     
-    return render_template("test.html",n=classification,u=heatmap_base64)
+    return render_template("Search.html",n=classification,u=heatmap_base64)
